@@ -7,5 +7,27 @@ To download locally 
 Git scm (download git bash in windows).
 
 
+For New Repository:
+git init
+git add README.md or git add .
+git commit -m "first commit"
+git remote add origin git@github.com:mavrick202/hello123.git
+git push -u origin master
+ 
+For existing Repository:
+rm -rf .git
+git init
+git remote add origin git@github.com:mavrick202/hello123.git
+git push -u origin master
+
+root@ubuntu:~/githubbyraj# git log
+commit 3fc970b67b3c7a9dd192711ef0536b1d5ca6848b
+Author: root <root@ubuntu.vitel-webconf>
+Date:   Mon Oct 12 14:47:39 2020 -0400
+
+    intro github (its my last coomit from git)
+
+
+git log --oneline
 
 
