@@ -54,6 +54,10 @@ git branch -b branchname
 to create a branch and shift in same time
 git checkout -b branchname (copy the master branch)
 
+relation
+git checkout destinationbranch
+git checkout sourcebranch
+
 
 
 
