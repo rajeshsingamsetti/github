@@ -30,4 +30,45 @@ Date:   Mon Oct 12 14:47:39 2020 -0400
 
 git log --oneline
 
+git pull githuburl bramchname
+
+git push origin master --force
+
+git reset hard-2 (backward to previous 2 log commits)
+---------------------------------------------
+git reset
+git branches
+git merge & rebase
+
+pull request
+
+branches (master having main source code)
+copy the master branch make a dummy branch
+git clone githuburl
+to find which branch u are now
+git branch
+
+* to create a branch
+git branch -b branchname
+* indicate which branch you are
+to create a branch and shift in same time
+git checkout -b branchname (copy the master branch)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
