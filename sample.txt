@@ -1,0 +1,11 @@
+
+Git is an software application.
+
+Github && gitlab && bitbucket. && azure devops pro
+
+To download locally 
+Git scm (download git bash in windows).
+
+
+
+
