@@ -36,9 +36,36 @@ type
 git clone nowhere paste the sshtypeurl
 if u want use one project 2 folder
 go to github create one repo
-git remote add origin 
+git remote add origin giveneworigin
+git remote -v
+git push -u origin master
+**** git branching
 
-apart from git clone we connect through ssh
+new features all builds in branches
+to check which branch u r in currently : git branch
+
+*** git checkout is used for switch between branches
+** to create a branch in git
+git checkout -b featurebranch
+vi newfile.txt
+add
+commit
+git push -u origin branchname
+
+now go to master branch
+git checkout master
+git pull
+
+*** to delete a branch
+git branch -d featurebranch(barnachname)
+
+*******Merge Conflicts
+
+
+
+** to solve merging issue
+error: you need to resolve your current index first
+root@ubuntu:~/githubbyraj# git reset --merge
 
 
 
