@@ -77,8 +77,13 @@ git diff branchname
 git merge master(to merge the master to child)
 solve conflicts
 
+******UNDO on git
+above same setup in child branch open a file add a line and commit it
+git reset new.txt
 
-
+git reset HEAD~1 (un stage only previous one commit)
+git log (to get all comitted logs)
+git reset --hard 54c8c08f26f952fd1650408d9744061bbf19aa2c (spot remove that code from file)
 
 =============sample git commands================
 Git Commands
