@@ -58,6 +58,61 @@ relation
 git checkout destinationbranch
 git checkout sourcebranch
 
+git add . or git reset -- HARD . /git reset HEAD -- testfile4
+git commit
+git reset --hard HEAD
+git reset --hard commitid
+git clean -n
+git clean -d -f
+git commit --amend
+git blame filename
+git push --force
+ 
+git config --global core.editor "nano"
+git branch
+git checkout -b branch
+git branch -D
+git stash
+git stash save "add style to our site"
+git stash list
+git stash pop stash@{2}
+git merge
+git rebase
+git rebase -i HEAD~n
+git squash
+ 
+ 
+git secrets
+git tags
+git cherry-pick
+ 
+===========================================
+#!/bin/bash
+I=0
+mkdir /mygitrepo
+touch /mygitrepo/file1
+cd /mygitrepo
+git init
+while [ $I -lt $@ ]; do
+​echo 'TESTDATA-FROM-SREE-'$I >>file1 && git add . && git commit -m COMMIT-$I
+​I=$(expr $I + 1)
+done
+I=0
+ 
+bash script.sh 10
+ 
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+git reset --hard origin/branch #This command will sync the local repository with the remote repository getting rid of every change you have made on your local.
+https://www.atlassian.com/git/tutorials/cherry-pick
+git push origin master --force
+git reflog
+git reflog show --all
+git rebase https://www.youtube.com/watch?v=f1wnYdLEpgI
+ 
+alias rem='cd .. && rm -rf /mygitrepo/ && cd ~ && bash commit.sh 10 && cd /mygitrepo'
+
+
 
 
 
