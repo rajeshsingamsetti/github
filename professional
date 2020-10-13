@@ -14,6 +14,34 @@ git scm
 check git by using
 git version
 
+version control is used to track the code what we made changes
+clone 
+add
+commit
+push
+pull
+
+mkdir newpro
+git init
+git status
+git add .(all changes files)
+git commit -m "new changes are going to up"
+git push origin master
+
+**** to clone through ssh 
+create an ssh-keygen (copy the public key)
+go to github settings + ssh & gpg keys paste the public key of keygen)
+go to terminal
+type 
+git clone nowhere paste the sshtypeurl
+if u want use one project 2 folder
+go to github create one repo
+git remote add origin 
+
+apart from git clone we connect through ssh
+
+
+
 =============sample git commands================
 Git Commands
 Translated Versions
