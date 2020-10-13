@@ -60,12 +60,23 @@ git pull
 git branch -d featurebranch(barnachname)
 
 *******Merge Conflicts
-
+create a newbranch
+git checkout -b mbranch
 
 
 ** to solve merging issue
 error: you need to resolve your current index first
 root@ubuntu:~/githubbyraj# git reset --merge
+open existing file what u had from master
+change some lines of code and commit it.
+
+And again checkout to master
+the above branch which file u made changes same changes made on master branch also and commit it.
+And go to child branch
+git diff branchname
+git merge master(to merge the master to child)
+solve conflicts
+
 
 
 
