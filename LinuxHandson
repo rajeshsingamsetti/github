@@ -278,5 +278,72 @@ else
    echo "You have cross 60 , stay home and avoid CORONA..!!"
 fi
 done
-=============
+=============***
+file operators check files are exist or not
+refurl: https://www.tutorialspoint.com/unix/unix-file-operators.htm
 
+================
+arrays linux
+refurl:https://www.tutorialspoint.com/unix/unix-using-arrays.htm
+add access & secretkey in aws cli  --> ./aws/credentiala
+
+./aws/config
+[profiles east1]
+region = us-east-1
+output = json
+
+[profiles east2]
+region = us-east-2
+output = json
+
+[profiles east3]
+region = us-east-3
+output = json
+
+[profiles east4]
+region = us-east-4
+output = json
+
+// to check onstance present in region type 
+aws ec2 describe-regions --profile east1
+
+================ARRAYS-WITH-AWSCLI-JQ=======================
+PROFILES=(‘us-east-1’ ‘us-east-2’ ‘us-west-1’ ‘us-west-2’)
+echo ${PROFILES[@]}
+east1 east2 west1 west2
+#####--LIST-INSTANCES--##########
+for PROFILE in ${PROFILES[@]}; do
+   echo $PROFILE
+   aws ec2 describe-instances --profile $PROFILE | jq -r '.Reservations[].Instances[].InstanceId'
+   echo "==========================="
+   sleep 1
+done
+ 
+#####--LIST-KEYPAIRS--##########
+for PROFILE in ${PROFILES[@]}; do
+   echo $PROFILE
+   aws ec2 describe-key-pairs --profile $PROFILE | jq -r '.KeyPairs[].KeyName'
+   echo "==========================="
+   sleep 1
+done
+ 
+#!/bin/bash
+#####--LIST-REGIONS-USING-JQ--##########
+REGIONS=$(aws ec2 describe-regions --profile east1 | jq -r '.Regions[].RegionName')
+ 
+#!/bin/bash
+#####--LIST-REGIONS-USING-ONLY-CLI--##########
+aws ec2 describe-regions --profile east1 | grep -i RegionName | cut -d ":" -f 2 | tr -d '"' | tr -d ','
+ 
+###############--WHILE-LOOP#################
+ 
+X=0
+while [ $X -lt 4 ]; do
+   echo ${PROFILES[$X]}
+   aws ec2 describe-key-pairs --profile ${PROFILES[$X]} | jq -r '.KeyPairs[].KeyName'
+   echo "====================="
+   X=$(($X + 1))
+   sleep 1
+done
+ 
+ 
