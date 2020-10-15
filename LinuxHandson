@@ -18,6 +18,15 @@ echo "$a"
 echo "${a}"
 
 here single quote for string
+operators:
+#!/bin/bash
+function testing () {
+read -p "Enter the first number:" NUM1
+read -p "Enter the second number:" NUM2
+NEWNUM=$(($NUM1+$NUM2))
+#echo "The New Number is $NEWNUM""
+return ${NEWNUM}
+}
 
 first script
 #! /bin/bash
@@ -116,4 +125,32 @@ grep -n -w it matches the word along with line number
 awk we used for data manupulating (without using grep and cut -d ":" -f 1,2,3)
 ex: cat /etc/passwd | awk -F ':' '{print $1,$2,$3}'
 
+**** sed
+By using sed we can replace the data ontime
+echo "https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip" | sed 's/0.12.28/'"$ver"'/g'
+refurl: https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
 
+** tr is used for converting lowercase to uppercase and remove the spaces
+*** sort is a command is used to arrange a file in alphabetical order
+refurl : https://www.geeksforgeeks.org/sort-command-linuxunix-examples/
+
+***multi if condition
+IF Statement - Multiple Conditions:
+ 
+echo -e "1.Morning\n2.Afternoon\n3.Evening\n4.Night"
+echo -n "Please select from above:"
+read n
+if [[ $n -eq 1 ]]
+then
+echo "Good Morning"
+elif [[ $n -eq 2 ]]
+then
+echo "Good Afternoon"
+elif [[ $n -eq 3 ]]
+then
+echo "Good Evening"
+elif [[ $n -eq 4 ]]
+then
+echo "Good Night"
+Fi
+ 
