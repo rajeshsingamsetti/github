@@ -1,3 +1,40 @@
 Welcome to linux hands on
 
 && after one command execution other command will 
+
+by using curl we can see that total scripr
+curl: check url
+curl https://get.docker.com | bash && docker version
+
+here what ever output we get from first paramter it will passthat output another parameter.
+cat /etc/passwd | cut -d ":" -f 1
+cat it will read the data and that data out put passto next param cut delimited by : we are getting the first filed
+
+Variable declaration:
+types of variable declaration
+a=20
+echo $a
+echo "$a"
+echo "${a}"
+
+here single quote for string
+
+first script
+#! /bin/bash
+echo "first script"
+i=$@
+while [ $i -lt 6]
+do
+echo " i am $i"
+sleep 2
+i=$(( $i + 1 ))
+done
+
+
+chmod +x test.sh
+./test.sh 100
+hete $@ is used for taking the user values as a input
+===================
+
+
+
