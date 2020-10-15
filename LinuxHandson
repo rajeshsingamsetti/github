@@ -243,5 +243,40 @@ done
 echo "==================="
 =====================================
 
+linux relational operators
+ref url: https://www.tutorialspoint.com/unix/unix-relational-operators.htm
+============if examples=======
+#!/bin/bash
+re='^[0-9]+$'
+if [ $# -gt 0 ]; then
+   for PERSON in $@; do
+       if [[ -n $PERSON ]] && [[ $PERSON =~ $re ]]; then
+           #echo "Lets Create User $PERSON"
+           echo "Username $PERSON is Empty or Invalid User Name."
+       else
+           #echo "Username is Empty or Invalid User Name."
+           echo "Lets Create User $PERSON"
+       fi
+   done
+else
+   echo "No Args Given"
+fi
+allows only numbers
+============ age caculator=======
 
+#!/bin/bash
+while true
+do
+read -p "Please Enter Your Name:" Name
+read -p "Please Enter DOB Year:" DOY
+AGE=$(expr 2020 - $DOY)
+if [ $AGE -le 15 ]; then
+   echo "You are 15 or below, get back to home....!!"
+elif [[ $AGE -gt 15 ]] && [[ $AGE -lt 60 ]]; then
+   echo "Your Are Allowed To Drink....!!"
+else
+   echo "You have cross 60 , stay home and avoid CORONA..!!"
+fi
+done
+=============
 
