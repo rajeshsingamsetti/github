@@ -154,3 +154,27 @@ then
 echo "Good Night"
 Fi
 =================================== 
+parameters input
+$?
+$#
+$*
+$@
+
+arrays
+exports
+for & while loops
+
+params examples:
+./script.sh  1 2 3 
+now user enter 3 parameters how we can count that parameters
+ex:
+#! /bin/bash
+echo "to find how many params we can use $#"
+if [ $# -gt 3 ]
+then
+echo "please enter below 3 params only"
+else 
+echo "u have enetered $#"
+fi
+==================
+
