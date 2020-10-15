@@ -133,7 +133,7 @@ refurl: https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
 ** tr is used for converting lowercase to uppercase and remove the spaces
 *** sort is a command is used to arrange a file in alphabetical order
 refurl : https://www.geeksforgeeks.org/sort-command-linuxunix-examples/
-
+=============================================================
 ***multi if condition
 IF Statement - Multiple Conditions:
  
@@ -153,4 +153,4 @@ elif [[ $n -eq 4 ]]
 then
 echo "Good Night"
 Fi
- 
+=================================== 
