@@ -213,6 +213,35 @@ do
 echo "Creating The Volume...."
 aws ec2 create-volume --volume-type gp2 --size $VOL --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=Name,Value=PRODVOL}]'
 done
+
+to run script
+./test.sh 1 2 3 4(no 1 & 2 & 3 & 4 gb volumes are created
 ================================
+params example code
+=========================
+#!/bin/bash
+for x in $*
+do
+echo $x
+done
+echo "==================="
+for x in $@
+do
+echo $x
+done
+echo "==================="
+echo '"$*"'
+for x in "$*"
+do
+echo $x
+done
+echo "==================="
+for x in "$@"
+do
+echo $x
+done
+echo "==================="
+=====================================
+
 
 
