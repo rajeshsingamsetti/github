@@ -175,6 +175,44 @@ then
 echo "please enter below 3 params only"
 else 
 echo "u have enetered $#"
+echo $1
+echo $2
+echo $3
+echo $4
 fi
 ==================
+$? ==> privious ouput return success or not
+
+$* and $@ both are same
+
+this will work on user how many inputs they fill it takes only that inputs
+ex:
+#! /bin/bash
+echo $@
+bash test.sh vm1 vm2
+bash test.sh vm1 vm2 vm3
+
+=======================
+for loop ref
+refurl: https://www.tutorialspoint.com/unix/for-loop.htm
+above $@ same senario in loop
+
+echo $@
+for vm in $@
+do
+echo "shutting vm $vm"
+done
+
+=============real time create volumes=================
+Creating volumes
+ 
+#!/bin/bash
+echo $*
+for VOL in $*
+do
+echo "Creating The Volume...."
+aws ec2 create-volume --volume-type gp2 --size $VOL --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=Name,Value=PRODVOL}]'
+done
+================================
+
 
