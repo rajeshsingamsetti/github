@@ -35,6 +35,50 @@ chmod +x test.sh
 ./test.sh 100
 hete $@ is used for taking the user values as a input
 ===================
+****By using scripting we need to create a file in every 5 secondss3 bucket in aws
 
+for this we need aws cli
+apt-get install unzip paste the below command
 
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+aws --version
+aws-cli/2.0.56 Python/3.7.3 Linux/4.4.0-1113-aws exe/x86_64.ubuntu.16
+aws configure
+aws s3 ls
+NOw we need to configure our aws
+
+buk=$(aws s3 ls | cut -d " " -f 3)
+#code
+#! /bin/bash
+i=0
+while [ $i -lt 3]
+do
+date > file$i s3://bucketname
+echo "uploading file$i"
+sleep 2
+i=$(( $i + 1 ))
+done
+
+====================================================
+another realtime
+need to check user exist or not && if user not exist create it && set random password at first login
+to check users /etc/passwd
+
+read is used to enter command side input values
+to delete a user userdel -r username
+--now we need to learn operators
+learn this
+https://www.tutorialspoint.com/unix/unix-basic-operators.htm
+-z is check userinput is empty or not(note it only for strings)
+***** linux very important params to know
+$?
+$@
+$*
+$#
+
+$? is used for previously executed command succees or not if it sucees it will return 0 
+echo $?
 
