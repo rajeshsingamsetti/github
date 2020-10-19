@@ -1,3 +1,7 @@
+Erros:
+1.fatal: unable to auto-detect email address (got 'shiva@LAPTOP-FBO0N238.(none)')
+solution:
+git config --global user.email "rajeshsingamsetties@gmail.com"
 Topics
 intro
 install
