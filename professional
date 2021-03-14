@@ -1,3 +1,54 @@
+=======================
+116  git add .
+  117  git commit -m "awscloudformation"
+  118  git push origin main
+  119  git pull origiin main
+  120  git pull origin main
+  121  git branch -a
+  122  git checkout main
+  123  git push origin main
+  124  git status
+  125  ls
+  126  git merge main master
+  127  git merge master main
+  128  ls
+  129  git checkout master
+  130  ls
+  131  git chechout main
+  132  git checkout main
+  133  git pull origin master
+  134  ls
+  135  git pull master
+  136  ls
+  137  ls
+  138  git merge master
+  139  git add .
+  140  git statuus
+  141  git status
+  142  ls
+  143  ls
+  144  git pull origin master
+  145  git checkout master
+  146  git status
+  147  git remote -v
+  148  git push origin main
+  149  git push origin master
+  150  git checkout main
+  151  git pull origin masterr
+  152  git pull origin master
+  153  ls
+  154  git merge main master
+ ** to pull remote brnaches in main branch (unrelated issue)
+ 155  git pull origin master --allow-unrelated-histories
+ 
+  160  git branch -a
+
+*** to delete remote branch
+  163  git push origin --delete master
+
+
+
+=======================
 Erros:
 1.fatal: unable to auto-detect email address (got 'shiva@LAPTOP-FBO0N238.(none)')
 solution:
